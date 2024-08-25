@@ -21,12 +21,19 @@ database.connect();
 //middlewares
 app.use(express.json());
 app.use(cookieParser());
-app.use(
-	cors({
-		origin:"http://localhost:3000",
-		credentials:true,
-	})
-)
+// app.use(
+// 	cors({
+// 		origin:"http://localhost:3000",
+// 		credentials:true,
+// 	})
+// )
+
+  const corsOptions = {
+  origin: 'https://studynotion-frontend-eight-lemon.vercel.app', // Allow requests from this origin
+  optionsSuccessStatus: 200, // Some legacy browsers (IE11, various SmartTVs) choke on 204
+};
+  // Use the CORS middleware with the specified options
+  app.use(cors(corsOptions));
 
 app.use(
 	fileUpload({
