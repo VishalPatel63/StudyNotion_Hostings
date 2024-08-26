@@ -95,19 +95,13 @@ export const Sidebar = () => {
 
 
 
-          <button className="   ml-2 md:hidden lg:hidden    "
-
-// }
-
-// )}
-
-   onClick={() => setThevalue(value)}
-   
->
            <div className='h-4 w-4 ' >
+  <button className="   ml-2 md:hidden lg:hidden    "
+   onClick={() => setThevalue(value)}   
+>
             <AiOutlineMenu fontSize={25} fill="#AFB2BF"   />
-        </div>
           </button>
+        </div>
   
 
            
