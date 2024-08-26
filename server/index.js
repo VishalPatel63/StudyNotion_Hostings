@@ -29,7 +29,7 @@ app.use(cookieParser());
 // )
 
   const corsOptions = {
-  origin: 'https://studynotion-frontend-eight-lemon.vercel.app', // Allow requests from this origin
+  origin: 'https://studynotion-frontend-bay.vercel.app/', // Allow requests from this origin
   optionsSuccessStatus: 200, // Some legacy browsers (IE11, various SmartTVs) choke on 204
 };
   // Use the CORS middleware with the specified options
