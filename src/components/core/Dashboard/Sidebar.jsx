@@ -95,19 +95,8 @@ export const Sidebar = () => {
 
 
 
-          <button className={`   ml-2 md:hidden lg:hidden h-4 w-4   `}
-//                   onClick={() => setConfirmationModalInstr({
-//                   btn3Text:"My Profile",
-//                   btn4Text:"Dashboard",
-//                   btn5Text:"My Courses",
-//                   btn6Text:"Add Course",
-//                   btn7Text: "Cancel",
+          <button className="   ml-2 md:hidden lg:hidden    "
 
-//                  btn3Handler:()=> dispatch(navigate("/dashboard/my-profile") ? (setConfirmationModalInstr(true)):(setConfirmationModalInstr(false))) ,
-//                  btn4Handler:()=> dispatch(navigate("/dashboard/instructor")? (setConfirmationModalInstr(true)):(setConfirmationModalInstr(false))),
-//                  btn5Handler:()=> dispatch(navigate("/dashboard/my-courses")? (setConfirmationModalInstr(true)):(setConfirmationModalInstr(false))),
-//                  btn6Handler:()=> dispatch(navigate("/dashboard/add-course")? (setConfirmationModalInstr(true)):(setConfirmationModalInstr(false))),
-//                  btn7Handler:()=> setConfirmationModalInstr(false),
 // }
 
 // )}
