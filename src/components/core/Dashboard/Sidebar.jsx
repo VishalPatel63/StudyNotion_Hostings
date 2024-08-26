@@ -93,9 +93,9 @@ export const Sidebar = () => {
 
    {/* Instructor */}
 
-   <div className='h-4 w-4 ' >
 
-          <button className={`   mr-4 md:hidden lg:hidden h-4 w-4   `}
+
+          <button className={`   ml-2 md:hidden lg:hidden h-4 w-4   `}
 //                   onClick={() => setConfirmationModalInstr({
 //                   btn3Text:"My Profile",
 //                   btn4Text:"Dashboard",
@@ -115,9 +115,11 @@ export const Sidebar = () => {
    onClick={() => setThevalue(value)}
    
 >
+           <div className='h-4 w-4 ' >
             <AiOutlineMenu fontSize={25} fill="#AFB2BF"   />
+        </div>
           </button>
-   </div>
+  
 
            
     </div>
