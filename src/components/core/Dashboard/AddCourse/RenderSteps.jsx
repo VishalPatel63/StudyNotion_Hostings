@@ -69,7 +69,7 @@ export default function RenderSteps () {
                     return (
                         <>
                         <div key={item.id}
-                        className='flex min-w-[130px] flex-col items-center gap-y-2'
+                        className='flex lg:min-w-[130px] md:min-w-[120px] min-w-[90px] flex-col items-center gap-y-2'
                         >
                             <p className= {`text-sm ${step >= item.id ? "text-richblack-5":"text-richblack-500"}`}>
                                 {item.title}
