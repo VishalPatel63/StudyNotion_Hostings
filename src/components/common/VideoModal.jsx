@@ -140,7 +140,7 @@ export const VideoModal = ({setReviewModal,setModal}) => {
         <div className=' flex justify-center '>
        <button  
        onClick={()=> setModal(false)}
-       className='mt-6 h-10 w-20 text-sm text-center  px-3 bg-yellow-100 rounded-md'
+       className='mt-6 h-10 w-20 text-sm text-center px-3 bg-yellow-100 rounded-md'
        >
        <MdOutlineArrowBackIos  size={30} className='text-center ml-3 text-black' />
        </button>
