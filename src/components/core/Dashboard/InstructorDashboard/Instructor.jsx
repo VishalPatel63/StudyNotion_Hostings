@@ -119,14 +119,14 @@ export const Instructor = () => {
                     <p className="lg:text-sm md:text-sm text-[8px] font-medium text-richblack-50">
                       {course.courseName}
                     </p>
-                    <div className="mt-1 flex items-center space-x-2">
-                      <p className="text-xs font-medium text-richblack-300">
+                    <div className="mt-1 flex items-center lg:space-x-2 md:spaec-x-2 space-x-1">
+                      <p className="lg:text-sm md:text-sm text-[8px] font-medium text-richblack-300">
                         {course.studentsEnrolled.length} students
                       </p>
-                      <p className="text-xs font-medium text-richblack-300">
+                      <p className="lg:text-sm md:text-sm text-[8px] font-medium text-richblack-300">
                         |
                       </p>
-                      <p className="text-xs font-medium text-richblack-300">
+                      <p className="lg:text-sm md:text-sm text-[8px] font-medium text-richblack-300">
                         Rs. {course.price}
                       </p>
                     </div>
