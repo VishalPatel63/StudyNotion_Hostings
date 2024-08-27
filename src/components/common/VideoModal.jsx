@@ -5,7 +5,7 @@ import { useLocation, useNavigate, useParams } from 'react-router-dom';
 import { IoIosArrowBack } from 'react-icons/io';
 import { BsChevronDown } from 'react-icons/bs';
 import { AiOutlineMenu } from 'react-icons/ai';
-import { IconBnt } from './IconBnt';
+
 
 export const VideoModal = ({setReviewModal,setModal}) => {
     const [activeStatus,setActiveStatus] =  useState("");
