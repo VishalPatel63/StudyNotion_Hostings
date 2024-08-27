@@ -116,7 +116,7 @@ export const Instructor = () => {
                     className="lg:h-[201px] md:h-[201px] h-[120px] w-full rounded-md object-cover"
                   />
                   <div className="mt-3 w-full">
-                    <p className="text-sm font-medium text-richblack-50">
+                    <p className="lg:text-sm md:text-sm text-[8px] font-medium text-richblack-50">
                       {course.courseName}
                     </p>
                     <div className="mt-1 flex items-center space-x-2">
