@@ -81,7 +81,7 @@ export const CourseBuilderForm = () => {
     setValue("sectionName",sectionName);
   }
   return (
-    <div className='space-y-8 rounded-md border-[1px] border-richblack-700 bg-richblack-800 lg:p-6 md:p-6 p-2 lg:mr-0 md:mr-0 mr-7 '>
+    <div className='space-y-8 rounded-md border-[1px] border-richblack-700 bg-richblack-800 lg:p-6 md:p-6 p-2 lg:mr-0 md:mr-0 mr-2 '>
      <p className='text-2xl font-semibold text-richblack-5'>Course Builder</p>
      <form onSubmit={handleSubmit(onSubmit)} className='space-y-4'>
       <div className='flex flex-col space-y-2'>
