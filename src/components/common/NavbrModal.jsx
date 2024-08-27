@@ -50,7 +50,7 @@ export const NavbrModal = ({ setConfirmationModalNav }) => {
         <div>
             {/* <button onClick={() => setConfirmationModalNav(false)}> */}
                 <div className='fixed lg:hidden md:hidden inset-0 z-[100] overflow-y-hidden  grid place-items-start  justify-items-end mt-14 overflow-auto transition- duration-1000   '>
-                    <div className='w-5/12 h-screen max-w-[350px]  border-richblack-400 bg-richblack-800  bg-opacity-95 p-6 transition-transform  duration-1000'>
+                    <div className='w-5/12 h-screen max-w-[350px]  border-richblack-400 bg-richblack-900  bg-opacity-95 p-6 transition-transform  duration-1000'>
                     <div>
                         
                     <button
@@ -60,7 +60,7 @@ export const NavbrModal = ({ setConfirmationModalNav }) => {
                 <RxCross2 size={30} />
                 </button>
                     </div>
-                    <hr className='text-white opacity-20 mb-5' />
+                    <hr className='text-white opacity-50 mb-5' />
                         <div className="flex flex-col w-11/12 max-w-maxContent items-center justify-between">
                        
 
