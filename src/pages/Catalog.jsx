@@ -121,7 +121,7 @@ export const Catalog = () => {
                  </p>
             </div>
 
-            <div className='lg:py-8 md:py-8 py-4 items-center lg:ml-0 md:ml-0 ml-8'>
+            <div className='lg:py-8 md:py-8 py-4 items-center lg:ml-0 md:ml-0 ml-8 lg:mr-0 md:mr-0 mr-2'>
             <CourseSlider Courses = {catalogPageData?.data?.selectedCategory?.courses}/>
             </div>
          </div>
@@ -130,7 +130,7 @@ export const Catalog = () => {
            <div className='section_heading lg:ml-0 md:ml-0 ml-8'>
             Top Courses in {catalogPageData?.data?.differentCategory?.name}
              </div>
-             <div className='lg:py-8 md:py-8 py-4 items-center lg:ml-0 md:ml-0 ml-8'>
+             <div className='lg:py-8 md:py-8 py-4 items-center lg:ml-0 md:ml-0 ml-8 lg:mr-0 md:mr-0 mr-2'>
             <CourseSlider Courses = {catalogPageData?.data?.differentCategory?.courses}/>
             </div>
          </div>
@@ -139,7 +139,7 @@ export const Catalog = () => {
             <div className='section_heading lg:ml-0 md:ml-0 ml-8 '>
                 Frequently Bought Together
              </div>
-            <div className='lg:py-8 md:py-8 py-4 lg:ml-0 md:ml-0 ml-8'>
+            <div className='lg:py-8 md:py-8 py-4 lg:ml-0 md:ml-0 ml-8 lg:mr-0 md:mr-0 mr-2'>
               <div className='grid grid-cols-1 lg:gap-6 md:gap-6 gap-5 md:grid-cols-1  lg:grid-cols-2'>
               
               {
