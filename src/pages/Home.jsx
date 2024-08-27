@@ -225,7 +225,7 @@ export const Home = () => {
         gap-8 bg-richblack-900 text-white
         '>
       <IntsructorSection></IntsructorSection>
-         <h2 className='text-center text-4xl font-semibold mt-10'>Reviews from Other Learners</h2>
+         <h2 className='text-center lg:text-4xl md:text-3xl text-3xl font-semibold mt-10'>Reviews from Other Learners</h2>
          {/* reviewa slider here */}
           <ReviewSlider1/>
           
