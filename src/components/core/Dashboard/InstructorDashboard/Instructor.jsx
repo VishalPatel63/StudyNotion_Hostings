@@ -38,7 +38,7 @@ export const Instructor = () => {
     const totalAmount = instructorData?.reduce((acc,curr) => acc+ curr.totalAmountGenerated,0);
     const totalStudents = instructorData?.reduce((acc,curr) => acc+ curr.totalStudentsEnrolled,0);
   return (
-    <div >
+   <div className='overflow-x-hidden' >
       <div className='space-y-2 lg:mt-0 md:mt-0 mt-10  '>
         <h1 className='text-2xl font-bold text-richblack-5'>
             Hi {user?.firstName}👋
@@ -107,7 +107,7 @@ export const Instructor = () => {
             </div>
             {/* <div className='flex justify-center'> */}
 
-            <div className="my-4 flex items-start space-x-6 ">
+            <div className="my-4 flex items-start space-x-6 lg:space-x-6 md:space-x-6 space-x-3 ">
               {courses.slice(0, 3).map((course) => (
                 <div key={course._id} className="w-1/3">
                   <img
