@@ -179,7 +179,7 @@ export const CourseDetails = ({course}) => {
                         >
 
                             <div>
-                                <p className="text-4xl font-bold text-richblack-5 sm:text-[42px]">
+                                <p className="lg:text-4xl md:text-3xl text-2xl font-bold text-richblack-5 sm:text-[42px]">
                                     {courseName}
                                 </p>
                             </div>
