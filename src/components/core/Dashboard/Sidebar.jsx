@@ -45,7 +45,7 @@ export const Sidebar = () => {
   <button className=" ml-1    md:hidden lg:hidden w-4    "
    onClick={() => setThevalue(value)}   
 >
-            <AiOutlineMenu fontSize={25} fill="#AFB2BF"   />
+            <AiOutlineMenu fontSize={30} fill="#AFB2BF"   />
           </button>
         </div>
         <div className=' hidden md:block  flex-col border-r-[1px] border-r-richblack-700
