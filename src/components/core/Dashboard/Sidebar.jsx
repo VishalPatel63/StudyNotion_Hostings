@@ -42,7 +42,7 @@ export const Sidebar = () => {
    <div className='relative'> 
 
         <div className='h-4 w-2 ' >
-  <button className="    md:hidden lg:hidden    "
+  <button className=" ml-1    md:hidden lg:hidden w-4    "
    onClick={() => setThevalue(value)}   
 >
             <AiOutlineMenu fontSize={25} fill="#AFB2BF"   />
