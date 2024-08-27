@@ -138,12 +138,17 @@ export const VideoModal = ({setReviewModal,setModal}) => {
           ))}
         </div>
         <div className=' flex justify-center '>
-       <button  
+{/*        <button  
        onClick={()=> setModal(false)}
        className='mt-6 h-10 w-20 text-sm text-center px-3 bg-yellow-100 rounded-md'
        >
        <MdOutlineArrowBackIos  size={30} className='text-center ml-3 text-black' />
-       </button>
+       </button> */}
+             <IconBnt  
+       onclick={()=> setModal(false)}
+       text={">"}
+       customClasses='mt-6 h-10 w-20 text-sm   px-4 '
+       />
         </div>
       
       </div>
