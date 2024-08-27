@@ -31,7 +31,7 @@ export default function RenderSteps () {
                     className='flex flex-col items-center'
                     >
                          <button
-                         className={`grid cursor-pointer aspect-square lg:w-[34px] md:w-[34px] w-[25px] place-items-center lg:gap-8 md:gap-8 gap-4 rounded-full border-[1px] 
+                         className={`grid cursor-pointer aspect-square lg:w-[34px] md:w-[34px] w-[28px] place-items-center lg:gap-8 md:gap-8 gap-4 rounded-full border-[1px] 
                             ${step === item.id
                                 ? "border-yellow-50 bg-yellow-900 text-yellow-50"
                                 :"border-richblack-700 bg-richblack-800 text-richblack-300"
@@ -69,7 +69,7 @@ export default function RenderSteps () {
                     return (
                         <>
                         <div key={item.id}
-                        className='flex lg:min-w-[130px] md:min-w-[120px] min-w-[90px] flex-col items-center gap-y-2'
+                        className='flex lg:min-w-[130px] md:min-w-[120px] min-w-[100px] flex-col items-center gap-y-2'
                         >
                             <p className= {`lg:text-sm md:text-sm text-[11px] ${step >= item.id ? "text-richblack-5":"text-richblack-500"}`}>
                                 {item.title}
