@@ -60,7 +60,7 @@ export const PublishCourse = () => {
        handleCoursePublish();
     }
   return (
-    <div className='rounded-md border-[1px] bg-richblack-800  border-richblack-700 lg:p-6 md:p-6 p-2 lg:mr-0 md:mr-0 mr-2 '>
+    <div className='rounded-md border-[1px] bg-richblack-800  border-richblack-700 lg:p-6 md:p-6 p-2 lg:mr-0 md:mr-0 mr-1 '>
       <p className='text-2xl font-semibold text-richblack-5'>Publish Course</p>
       <form onSubmit={handleSubmit(onSubmit)}>
        <div className='my-6 mb-6'>
