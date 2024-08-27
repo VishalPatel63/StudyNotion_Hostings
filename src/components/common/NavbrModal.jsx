@@ -49,7 +49,7 @@ export const NavbrModal = ({ setConfirmationModalNav }) => {
 
         <div>
             {/* <button onClick={() => setConfirmationModalNav(false)}> */}
-                <div className='fixed lg:hidden md:hidden inset-0 z-[100]  grid place-items-start  justify-items-end mt-14 overflow-auto transition- duration-1000   '>
+                <div className='fixed lg:hidden md:hidden inset-0 z-[100] overflow-y-hidden  grid place-items-start  justify-items-end mt-14 overflow-auto transition- duration-1000   '>
                     <div className='w-5/12 h-80 max-w-[350px] rounded-lg border-richblack-400 bg-richblack-800  bg-opacity-95 p-6 transition-transform  duration-1000'>
                     <div>
                         
