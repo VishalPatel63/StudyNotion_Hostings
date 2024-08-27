@@ -210,12 +210,29 @@ export const CourseDetails = ({course}) => {
                             <p className="space-x-3 pb-4 text-3xl font-semibold text-richblack-5">
                                 Rs. {price}
                             </p>
-                            <button className="yellowButton" onClick={handleBuyCourse}>
-                                Buy Now
-                            </button>
-                            <button className="blackButtonb"
-                            onClick={()=> handleAddToCart}
-                            >Add to Cart</button>
+               <div className='flex flex-col gap-4'>
+                 <button
+                 className='yellowButton'
+                    onClick={
+                        user && courseData?.data?.courseDetails?.studentsEnrolled.includes(user?._id)
+                        ? ()=> navigate("/dashboard/enrolled-courses")
+                        : handleBuyCourse
+                    }
+                >
+                    {
+                        user && courseData?.data?.courseDetails?.studentsEnrolled.includes(user?._id) ? "Go To Course ": "Buy Now"
+                    }
+                </button>
+
+                {
+                    (!user || !courseData?.data?.courseDetails?.studentsEnrolled.includes(user?._id)) && (
+                        <button onClick={handleAddToCart}  
+                        className='blackButtonb'>
+                            Add to Cart
+                        </button>
+                    )
+                }
+            </div>
                         </div>
                       
                     </div>
