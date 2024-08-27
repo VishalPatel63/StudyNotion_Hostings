@@ -94,20 +94,7 @@ export const CourseDetails = ({course}) => {
         })
 
     }
-
-
-    const handleAddToCart = () =>{
-        if(user && user?.accountType === ACCOUNT_TYPE.INSTRUCTOR){
-          toast.error("You are an Instructor,you can not Buy a Course");
-          return;
-        }
-        if(token){
-          dispatch(addToCart(course._id))
-          return;
-        }
-    }
-
-        
+     
     if (paymentLoading) {
 
         return (
@@ -145,6 +132,27 @@ export const CourseDetails = ({course}) => {
         studentsEnrolled,
         createdAt,
     } = courseData.data?.courseDetails;
+
+
+
+    const handleAddToCart = () =>{
+        if(user && user?.accountType === ACCOUNT_TYPE.INSTRUCTOR){
+          toast.error("You are an Instructor,you can not Buy a Course");
+          return;
+        }
+        if(token){
+          dispatch(addToCart( courseData?.data?.courseDetails))
+          return;
+        }
+        setConfirmationModal({
+          text1:"You are not logged in",
+          text2: "Please login to add to cart",
+          btn1Text:"login",
+          btn2Text:"cancel",
+          btn1Handler: () =>navigate("/login"),
+          btn2Handler: ()=> setConfirmationModal(null),
+        })
+      }
 
 
     return (
