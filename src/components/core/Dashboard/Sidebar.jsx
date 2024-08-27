@@ -39,7 +39,15 @@ export const Sidebar = () => {
         )
     }
   return (
-    <div>  
+   <div className='relative'> 
+
+        <div className='h-4 w-2 ' >
+  <button className="    md:hidden lg:hidden    "
+   onClick={() => setThevalue(value)}   
+>
+            <AiOutlineMenu fontSize={25} fill="#AFB2BF"   />
+          </button>
+        </div>
         <div className=' hidden md:block  flex-col border-r-[1px] border-r-richblack-700
          lg:h-[calc(100vh-3.5rem)]  bg-richblack-800 py-10 md:mr-2'>
 
@@ -87,22 +95,6 @@ export const Sidebar = () => {
         {ConfirmationModall && <DashbarModal setConfirmationModall = {setConfirmationModall} setConfirmationModal={setConfirmationModal}></DashbarModal> }
         {/* {ConfirmationModalInstr && (user?.accountType === ACCOUNT_TYPE.INSTRUCTOR ) && <InstructorModal setConfirmationModalInstr = {setConfirmationModalInstr}></InstructorModal> } */}
 
-
-
-
-
-   {/* Instructor */}
-
-
-
-           <div className='h-4 w-4 ' >
-  <button className="    md:hidden lg:hidden    "
-   onClick={() => setThevalue(value)}   
->
-            <AiOutlineMenu fontSize={25} fill="#AFB2BF"   />
-          </button>
-        </div>
-  
 
            
     </div>
