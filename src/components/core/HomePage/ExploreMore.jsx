@@ -43,7 +43,7 @@ export const ExploreMore = () => {
                         <div
                         className={`lg:text-[16px] text-[10px] flex flex-row flex-wrap items-center lg:gap-2 gap-1
                             ${currentTab === element ?"bg-richblack-900 text-richblack-5 font-medium"
-                                :"text-richblack-200" } rounded-full transition-all duration-200 cursor-pointer hover:ring-richblack-900 hover:text-richblack-5 lg:px-7 lg:py-[7px] px-3 py-[5px]  `}
+                                :"text-richblack-200" } rounded-full transition-all duration-200 cursor-pointer hover:ring-richblack-900 hover:text-richblack-5 lg:px-7 lg:py-[7px] md:px-6 md:py-6 px-[6px] py-[5px]  `}
                                 key={index}
 
                                 onClick={() => setMyCards(element)}
