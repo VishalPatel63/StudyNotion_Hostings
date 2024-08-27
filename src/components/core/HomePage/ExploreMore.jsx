@@ -58,7 +58,7 @@ export const ExploreMore = () => {
 
         <div className='hidden lg:block h-[200px] '></div>
         {/* course card group */}
-        <div className="lg:absolute  justify-center lg:gap-0 flex lg:justify-between flex-wrap w-full lg:bottom-[0] lg:left-[50%] lg:translate-x-[-50%] lg:translate-y-[50%] text-black lg:mb-0  lg:px-0 px-3">
+        <div className="lg:absolute  justify-center lg:gap-x-0 md:gap-x-9 lg:gap-0 flex lg:justify-between flex-wrap w-full lg:bottom-[0] lg:left-[50%] lg:translate-x-[-50%] lg:translate-y-[50%] text-black lg:mb-0  lg:px-0 px-3">
             {
                 courses.map((element,index) =>{
                     return (
