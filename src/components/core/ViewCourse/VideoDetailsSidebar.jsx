@@ -72,7 +72,7 @@ export const VideoDetailsSidebar = ({setReviewModal}) => {
          
           }
       >
-         <AiOutlineMenu fontSize={24} fill="#AFB2BF"/>
+         <AiOutlineMenu fontSize={30} fill="#AFB2BF"/>
       </button> 
       {modal && <VideoModal setModal={setModal}  setReviewModal={setReviewModal} ></VideoModal>}
       </div>
