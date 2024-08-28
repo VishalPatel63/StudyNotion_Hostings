@@ -62,10 +62,10 @@ export const VideoDetailsSidebar = ({setReviewModal}) => {
 
   return (
       <>
-      <div className=''>
+      <div className='h-4 w-2'>
 
      <button
-      className='lg:hidden md:hidden '
+      className='lg:hidden md:hidden ml-1 w-4 '
        onClick={() => setThvale(value)
 
          
