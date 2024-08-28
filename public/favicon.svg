@@ -3,7 +3,7 @@
   <circle cx="50" cy="50" r="50" fill="white" stroke="black" stroke-width="2"/>
   
   <!-- Text -->
-  <text x="50" y="50" font-family="Arial" font-size="24" font-weight="bold" fill="black" text-anchor="middle" dominant-baseline="middle">
-    A
+  <text x="50" y="50" font-family="Arial" font-size="48" font-weight="bold" fill="black" text-anchor="middle" dominant-baseline="middle">
+    S
   </text>
 </svg>
