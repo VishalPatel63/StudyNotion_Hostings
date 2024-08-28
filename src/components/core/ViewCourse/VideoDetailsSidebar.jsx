@@ -62,6 +62,7 @@ export const VideoDetailsSidebar = ({setReviewModal}) => {
 
   return (
       <>
+        <div className = 'relative'>
       <div className='h-4 w-2'>
 
      <button
@@ -169,6 +170,7 @@ export const VideoDetailsSidebar = ({setReviewModal}) => {
 
      
      </div>
+          </div>
       </>
   )
 }
