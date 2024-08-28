@@ -159,7 +159,7 @@ export const CourseDetails = ({course}) => {
         <>
             <div className='relative w-full bg-richblack-800' >
                 {/* hero section */}
-                <div className='mx-auto box-content px-4 w-[1260px] 2xl:relative'>
+                <div className='mx-auto box-content px-4  2xl:relative'>
                     <div className='mx-auto grid min-h-[450px] max-w-maxContentTab justify-items-start py-8 lg:mx-0 lg:justify-items-start lg:py-0 xl:max-w-[810px]'>
                         <div className='relative block max-h-[30rem] mb-10 lg:hidden'>
                         <div className="absolute bottom-0 left-0 h-full w-full shadow-[#161D29_0px_-64px_36px_-28px_inset]"></div>
