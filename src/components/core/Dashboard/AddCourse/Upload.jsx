@@ -130,7 +130,6 @@
 
 
 
-
 import React, { useEffect, useRef, useState } from 'react';
 import { useDropzone } from 'react-dropzone';
 import { FiUploadCloud } from 'react-icons/fi';
@@ -158,7 +157,9 @@ export const Upload = ({
     };
 
     const { getRootProps, getInputProps, isDragActive } = useDropzone({
-        accept: !video ? { "image/*": [".jpg", ".jpeg", ".png"] } : { "video/*": [".mp4"] },
+        accept: !video
+            ? { "image/*": [".jpg", ".jpeg", ".png"] }
+            : { "video/*": [".mp4"] },
         onDrop,
     });
 
@@ -188,10 +189,10 @@ export const Upload = ({
                 className={`${
                     isDragActive ? "bg-richblack-600" : "bg-richblack-700"
                 } flex items-center justify-center rounded-md border-2 border-dotted border-richblack-500 cursor-pointer transition-colors duration-300
-                lg:min-h-[250px] md:min-h-[200px] min-h-[150px] p-4`}
+                min-h-[150px] p-4 md:min-h-[200px] lg:min-h-[250px]`}
             >
                 {previewSource ? (
-                    <div className='flex flex-col w-full h-full items-center justify-center p-6'>
+                    <div className='flex flex-col w-full h-full items-center justify-center p-4'>
                         {!video ? (
                             <img
                                 src={previewSource}
@@ -221,19 +222,21 @@ export const Upload = ({
                         )}
                     </div>
                 ) : (
-                    <div className="flex flex-col items-center">
+                    <div className="flex flex-col items-center text-center">
                         <input {...getInputProps()} ref={inputRef} className="hidden" />
-                        <div className="flex items-center justify-center bg-pure-greys-800 rounded-full p-3">
-                            <FiUploadCloud className='text-2xl text-yellow-50' />
+                        <div className="flex items-center justify-center bg-pure-greys-800 rounded-full p-4">
+                            <FiUploadCloud className='text-3xl text-yellow-50' />
                         </div>
-                        <p className='mt-2 text-center text-sm text-richblack-200'>
+                        <p className='mt-2 text-sm text-richblack-200'>
                             Drag and drop an {!video ? "image" : "video"}, or click to{" "}
                             <span className='font-semibold text-yellow-50'>Browse</span> a file
                         </p>
-                        <ul className='mt-4 text-center text-xs text-richblack-200'>
-                            <li>Aspect ratio 16:9</li>
-                            <li>Recommended size 1024x576</li>
-                        </ul>
+                        {!video && (
+                            <ul className='mt-4 text-xs text-richblack-200'>
+                                <li>Aspect ratio 16:9</li>
+                                <li>Recommended size 1024x576</li>
+                            </ul>
+                        )}
                     </div>
                 )}
             </div>
@@ -245,29 +248,3 @@ export const Upload = ({
         </div>
     );
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
