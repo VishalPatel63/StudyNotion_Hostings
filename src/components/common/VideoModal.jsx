@@ -149,7 +149,7 @@ export const VideoModal = ({setReviewModal,setModal}) => {
                  <IconBnt  
        onclick={()=> setModal(false)}
        text={">"}
-       customClasses='mt-6 h-10 w-20 text-sm   px-4 '
+       customClasses={'mt-6 h-10 w-20 text-sm   px-4 '}
        />
    
         </div>
