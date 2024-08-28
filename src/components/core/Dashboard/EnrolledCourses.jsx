@@ -41,9 +41,9 @@ return (
         <div className="my-8 lg:w-full md:w-full w-full  text-richblack-5 ">
           {/* Headings */}
           <div className="flex rounded-t-lg bg-richblack-500 ">
-            <p className="lg:w-[45%] md:w-[45%] w-[50%] lg:px-5 md:px-5 px-6 py-3">Course Name</p>
-            <p className="lg:w-1/4 md:w-1/4 w-1/2  lg:px-2 md:px-2 px-10 py-3">Duration</p>
-            <p className="flex-1 lg:px-2 md:px-2 px-8 py-3">Progress</p>
+            <p className="lg:w-[45%] md:w-[45%] w-[50%] lg:px-5 md:px-5 px-5 py-3">Course Name</p>
+            <p className="lg:w-1/4 md:w-1/4 w-1/2  lg:px-2 md:px-2 px-9 py-3">Duration</p>
+            <p className="flex-1 lg:px-2 md:px-2 px-7 py-3">Progress</p>
           </div>
           {/* Course Names */}
           {enrolledCourses.map((course, i, arr) => (
@@ -64,10 +64,10 @@ return (
                 <img
                   src={course.thumbnail}
                   alt="course_img"
-                  className="lg:h-14 md:h-14 h-12 lg:w-14 md:w-14 w-12 rounded-lg object-cover"
+                  className="lg:h-14 md:h-14 h-14 lg:w-14 md:w-14 w-12 rounded-lg object-cover"
                 />
                 <div className="flex max-w-xs flex-col gap-2">
-                  <p className="lg:font-semibold md:font-semibold font-medium">{course.courseName}</p>
+                  <p className="lg:font-semibold md:font-semibold font-light">{course.courseName}</p>
                   <p className="text-xs lg:text-richblack-300 md:text-richblack-300 text-richblack-25">
                     {course.courseDescription.length > 20
                       ? `${course.courseDescription.slice(0, 20)}...`
