@@ -34,7 +34,7 @@ export const Upload = ({
     
     const {getRootProps,getInputProps,isDragActive} = useDropzone({
         accept: !video
-        ? {"image/*":[".jpg",".jpeg",".png","image"]}
+       ? {"image/*":[".jpg" ,".jpeg",".png","image/jpeg","image/png","image/jpg"] }
         :{"video/*":[".mp4"]},
         onDrop,
     })
