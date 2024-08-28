@@ -130,12 +130,9 @@
 
 
 
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import { useDropzone } from 'react-dropzone';
-import { FiUploadCloud } from 'react-icons/fi';
 import { useSelector } from 'react-redux';
-import { Player } from 'video-react';
-import 'video-react/dist/video-react.css'; // Ensure video-react styles are imported
 
 export const Upload = ({
     name, label, register, setValue, errors,
@@ -148,6 +145,17 @@ export const Upload = ({
     const [previewSource, setPreviewSource] = useState(viewData || editData || "");
     const inputRef = useRef(null);
 
+    // Initialization logic similar to Dropzone's init method
+    useEffect(() => {
+        // Custom initialization code here
+        console.log('Upload component initialized');
+        // For example, you might set default values or configurations
+        if (viewData || editData) {
+            console.log('Initial file:', viewData || editData);
+        }
+    }, [viewData, editData]);
+
+    // Handle file drop or selection
     const onDrop = (acceptedFiles) => {
         const file = acceptedFiles[0];
         if (file) {
@@ -156,6 +164,7 @@ export const Upload = ({
         }
     };
 
+    // Configure react-dropzone
     const { getRootProps, getInputProps, isDragActive } = useDropzone({
         accept: !video
             ? { "image/*": [".jpg", ".jpeg", ".png"] }
@@ -163,6 +172,7 @@ export const Upload = ({
         onDrop,
     });
 
+    // Create a preview URL for the selected file
     const previewFile = (file) => {
         const reader = new FileReader();
         reader.readAsDataURL(file);
@@ -171,80 +181,37 @@ export const Upload = ({
         };
     };
 
+    // Register the input field with react-hook-form
     useEffect(() => {
         register(name, { required: true });
     }, [register, name]);
 
+    // Update form value when the selected file changes
     useEffect(() => {
         setValue(name, selectedFile);
     }, [selectedFile, setValue, name]);
 
     return (
-        <div className='flex flex-col space-y-2'>
-            <label htmlFor={name} className='text-sm text-richblack-5'>
-                {label}{!viewData && <sup className='text-pink-200'>*</sup>}
-            </label>
-            <div
-                {...getRootProps()}
-                className={`${
-                    isDragActive ? "bg-richblack-600" : "bg-richblack-700"
-                } flex items-center justify-center rounded-md border-2 border-dotted border-richblack-500 cursor-pointer transition-colors duration-300
-                min-h-[150px] p-4 md:min-h-[200px] lg:min-h-[250px]`}
-            >
-                {previewSource ? (
-                    <div className='flex flex-col w-full h-full items-center justify-center p-4'>
-                        {!video ? (
-                            <img
-                                src={previewSource}
-                                alt="Preview"
-                                className="w-full h-full object-cover rounded-md"
-                            />
-                        ) : (
-                            <Player
-                                aspectRatio="16:9"
-                                playsInline
-                                src={previewSource}
-                                className="w-full h-full"
-                            />
-                        )}
-                        {!viewData && (
-                            <button
-                                type='button'
-                                onClick={() => {
-                                    setPreviewSource("");
-                                    setSelectedFile(null);
-                                    setValue(name, null);
-                                }}
-                                className="mt-3 text-richblack-400 underline"
-                            >
-                                Cancel
-                            </button>
-                        )}
-                    </div>
+        <div className="max-w-full mx-auto p-4">
+            <label htmlFor={name} className="block text-lg font-medium mb-2">{label}</label>
+            <div {...getRootProps({ className: 'border-2 border-dashed border-blue-500 rounded-lg p-4 text-center cursor-pointer hover:border-blue-700 transition-all' })}>
+                <input {...getInputProps()} id={name} ref={inputRef} className="hidden" />
+                {isDragActive ? (
+                    <p className="text-blue-500">Drop the files here...</p>
                 ) : (
-                    <div className="flex flex-col items-center text-center">
-                        <input {...getInputProps()} ref={inputRef} className="hidden" />
-                        <div className="flex items-center justify-center bg-pure-greys-800 rounded-full p-4">
-                            <FiUploadCloud className='text-3xl text-yellow-50' />
-                        </div>
-                        <p className='mt-2 text-sm text-richblack-200'>
-                            Drag and drop an {!video ? "image" : "video"}, or click to{" "}
-                            <span className='font-semibold text-yellow-50'>Browse</span> a file
-                        </p>
-                        {!video && (
-                            <ul className='mt-4 text-xs text-richblack-200'>
-                                <li>Aspect ratio 16:9</li>
-                                <li>Recommended size 1024x576</li>
-                            </ul>
+                    <p className="text-gray-500">Drag 'n' drop some files here, or click to select files</p>
+                )}
+                {previewSource && (
+                    <div className="mt-4">
+                        {video ? (
+                            <video controls src={previewSource} className="w-full max-h-96 object-cover" />
+                        ) : (
+                            <img src={previewSource} alt="Preview" className="w-full max-h-96 object-cover" />
                         )}
                     </div>
                 )}
             </div>
-            {errors[name] && (
-                <span className="ml-2 text-xs text-pink-200">
-                    {label} is required
-                </span>
-            )}
+            {errors[name] && <p className="text-red-500 mt-2">{errors[name].message}</p>}
         </div>
     );
 };
