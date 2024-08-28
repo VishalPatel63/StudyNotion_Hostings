@@ -148,7 +148,7 @@ export const VideoModal = ({setReviewModal,setModal}) => {
 
                  <IconBnt  
        onclick={()=> setModal(false)}
-       text={">"}
+       text={"Cancel"}
        customClasses={'mt-6 h-10 w-20 text-sm   px-4 '}
        />
    
