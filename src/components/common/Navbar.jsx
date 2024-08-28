@@ -180,7 +180,7 @@ const Navbar = () => {
         <button className="mr-4 md:hidden lg:hidden   "
      onClick={()=>setConfirmationModalNav((true))}
         >
-          <AiOutlineMenu fontSize={24} fill="#AFB2BF" />
+          <AiOutlineMenu fontSize={30} fill="#AFB2BF" />
         </button>
 
 
